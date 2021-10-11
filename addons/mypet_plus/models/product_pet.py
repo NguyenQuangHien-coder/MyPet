@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from odoo import api, fields, models, tools, _
 from odoo.exceptions import UserError, ValidationError
-
+# product_pet.xml
 class ProductPet(models.Model):
     _name = "product.pet"
     _inherits = {'my.pet': 'my_pet_id'}

@@ -18,6 +18,7 @@
                                 <field name="basic_price"/>
                                 <field name="age"/>
                                 <field name="weight"/>
+                                <!-- <field name="hobby_list" widget="many2many_checkboxes" string="Hobby" /> -->
                             </group>
                             <group>
                                 <field name="dob"/>
@@ -78,10 +79,41 @@
                 (0, 0, {'view_mode': 'form', 'view_id': ref('my_pet_form_view')})]"/>
         </record>
 
+        <!-- PET_HOBBY -->
+        <!-- <record model="ir.ui.view" id="hobby_form">
+            <field name="name">Hobby Form</field>
+            <field name="model">hobby</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hobby_list">
+            <field name="name">Hobby List</field>
+            <field name="model">hobby</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="hobby_action_window">
+            <field name="name">Hobby</field>
+            <field name="res_model">hobby</field>
+            <field name="view_mode">tree,form</field>
+          </record> -->
+<!-- Top menu item -->
         <menuitem id="menu_my_pet"
             name="My Pet"
             action="action_my_pet"
             sequence="10"
             groups="base.group_user"/>
+<!-- menu categories -->
+        <!-- <menuitem name="Menu 1" id="menu_my_pet.menu_1" parent="menu_my_pet"/> -->
+<!-- actions -->
+        <!-- <menuitem name="Hobby" id="pet_hobby" parent="menu_my_pet.menu1" action="menu_my_pet.hobby_action_window"/> -->
     </data>
 </odoo>

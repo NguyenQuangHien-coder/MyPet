@@ -34,9 +34,12 @@
                      domain="[('is_virtual_class','=', True),('school_type','!=',False)]"-->
               <field name="school_address" string="School Address"
                      nolabel="1"/>
-              <field name="hobby_list" widget="many2many_checkboxes"
+              <field name="hobby_list" widget="many2many_tags"
                      string="Hobby"
                      help="Please select at least one hobby for this student."/>
+              <!-- <field name="hobby_list" widget="many2many_checkboxes"
+                     string="Hobby"
+                     help="Please select at least one hobby for this student."/> -->
               <field name="student_fees" string="Fees" readonly="0"/>
               <field name="total_fees" widget="monetary"/>
               <field name="active"/>

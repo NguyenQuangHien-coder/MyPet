@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from odoo import api, fields, models, tools, _
 from odoo.exceptions import UserError, ValidationError
-
+# my_pet_plus.xml
 class SuperPet(models.Model):
     _name = "super.pet" # <- new model name
     _inherit = "my.pet" # <- inherit fields and methods from model "my.pet"

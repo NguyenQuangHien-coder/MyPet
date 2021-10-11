@@ -235,9 +235,11 @@ class school_student(models.Model):
     #     return rtn
 
     #No Decorator
-    # def write(self, values):
-    #     rtn = super(school_student, self).write(values)
-    #     return rtn
+    def write(self, values):
+        rtn = super(school_student, self).write(values)
+        if not self.hobby_list:
+            raise UserError("Please choose at least 1 hobby")
+        return rtn
 
     # @api.returns('self', lambda value: value.id)
     # def copy(self, default = {}):

@@ -24,3 +24,11 @@ class MyPet(models.Model):
                                 column1='col_pet_id',
                                 column2='col_product_id')
     basic_price = fields.Float('Basic Price', default=0)
+
+#     hobby_list = fields.Many2many("hobby", "pet_hobby_rel","pet_id",
+#                                   "hobby_id", string="Hobby List",
+#                                   )
+# class Hoppies(models.Model):
+#     _name = "hobby"
+
+#     name = fields.Char(string="Hobby")
